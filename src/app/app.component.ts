@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
-import { TaskComponent } from "./task/task.component";
+import { TaskComponent } from './task/task.component';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +13,14 @@ import { TaskComponent } from "./task/task.component";
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUserId = 'u1' // initial value
+  selectedUserId?: string;
 
   // return user obj
   get selectedUser() {
-    return this.users.find(item => item.id === this.selectedUserId)
+    return this.users.find((item) => item.id === this.selectedUserId);
   }
-  
+
   onSelectUser(id: string) {
-    this.selectedUserId = id
+    this.selectedUserId = id;
   }
 }
