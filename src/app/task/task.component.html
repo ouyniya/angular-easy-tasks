@@ -7,14 +7,10 @@
   </header>
 
   <ul>
+    @for (task of selectedUserTasks; track task.id) {
     <li>
       <app-each-task />
     </li>
-    <li>
-      <app-each-task />
-    </li>
-    <li>
-      <app-each-task />
-    </li>
+    }
   </ul>
 </section>
