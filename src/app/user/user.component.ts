@@ -19,7 +19,7 @@ import { type User } from './user.model';
 export class UserComponent {
   @Input({ required: true }) user!: User;
   @Input({ required: true }) selected!: boolean;
-  @Output() select = new EventEmitter(); // output
+  @Output() select = new EventEmitter<string>(); // output
 
   get imagePath() {
     return 'assets/users/' + this.user.avatar;
