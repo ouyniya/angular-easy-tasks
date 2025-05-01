@@ -1,63 +1,100 @@
+/* Main container for tasks */
 #tasks {
-    padding: 1rem;
-    border-radius: 8px;
-    max-height: 60vh;
-    overflow: auto;
-    background-color: #3a2c54;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    gap: 1rem;
-  }
-  
-  h2 {
-    margin: 0;
-    font-size: 0.9rem;
-    width: 60%;
-    text-wrap: balance;
-  }
-  
-  menu {
-    margin: 0;
-    padding: 0;
-  }
-  
-  menu button {
-    font: inherit;
-    cursor: pointer;
-    background-color: #9965dd;
-    border-radius: 4px;
-    border: none;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.9rem;
-  }
-  
-  menu button:hover,
-  menu button:active {
-    background-color: #a565dd
-  }
-  
-  ul {
-    list-style: none;
-    margin: 1rem 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-height: 50vh;
-    overflow: auto;
-  }
-  
+  padding: 1rem;
+  border-radius: 8px;
+  max-height: 60vh;
+  overflow: auto;
+  border: 2px solid black;
+  background-color: #179cff;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#tasks:hover {
+  background-color: #0086f4; /* Slight darkening effect on hover */
+}
+
+/* Header for tasks */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+/* Task title (h2) styling */
+h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  width: 60%;
+  text-wrap: balance;
+  font-weight: bold;
+  color: #ffffff; /* Ensured white text for visibility */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Added text shadow for better visibility */
+  transition: transform 0.2s ease; /* Added smooth scaling on hover */
+}
+
+h2 {
+  color: white;
+}
+
+h3:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Styling for the menu and its buttons */
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+menu button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #10d000;
+  border-radius: 4px;
+  border: none;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+menu button:hover,
+menu button:active {
+  background-color: #199f0e;
+  border: 2px solid black;
+  transform: scale(1.05); /* Button zoom effect */
+}
+
+/* List styling for tasks */
+ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+/* Media queries for responsiveness */
   @media (min-width: 768px) {
-    h2 {
-      font-size: 1.25rem;
-    }
-  
-    menu {
-      width: auto;
-    }
+    /* Main container for tasks */
+  #tasks {
+    min-width: 700px;
   }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  menu {
+    width: auto;
+  }
+}
+
+
+
+

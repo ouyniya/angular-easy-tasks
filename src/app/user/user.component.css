@@ -1,41 +1,53 @@
+/* Container div with rounded corners and subtle shadow */
 div {
-    border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.35rem 0.5rem;
-    background-color: #433352;
-    color: #c3b3d1;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    width: 100%;
-    min-width: 10rem;
-    text-align: left;
-  }
-  
-  button:hover,
-  button:active,
-  .active {
-    background-color: #9965dd;
-    color: #150722;
-  }
-  
-  img {
-    width: 2rem;
-    object-fit: contain;
-    border-radius: 50%;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  span {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8rem;
-    font-weight: normal;
-  }
+  border-radius: 6px;
+
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out; /* Adding transition for hover effects */
+}
+
+/* Button with background, hover, and active effects */
+button {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  min-width: 10rem;
+  text-align: left;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+button:active,
+.active {
+  color: #150722;
+  transform: scale(1.05); /* Slight zoom on hover */
+  background-color: #fbf1d1;
+}
+
+/* Image inside div with rounded corners and shadow */
+img {
+  width: 2rem;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.2s ease; /* Smooth scaling transition */
+}
+
+img:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Span text with smaller font and normal weight */
+span {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: black; /* Slightly lighter text for a softer look */
+}

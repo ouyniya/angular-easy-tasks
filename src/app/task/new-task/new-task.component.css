@@ -1,85 +1,141 @@
+/* Backdrop for modal with a dark overlay */
 .backdrop {
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  transition: background-color 0.3s ease;
+}
+
+.backdrop:hover {
+  background-color: rgba(0, 0, 0, 0.85); /* Slightly lighter on hover */
+}
+
+/* Dialog box styling for the modal */
+dialog {
+  width: 100%;
+  max-width: 30rem;
+  background-color: #179cff;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slightly heavier shadow for depth */
+  overflow: hidden;
+  padding: 1.5rem;
+  position: fixed;
+  top: 15vh; /* Center the modal */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001; /* Ensure dialog is on top of the backdrop */
+  transition: all 0.3s ease; /* Smooth entry animation */
+}
+
+dialog.open {
+  animation: slideIn 0.3s ease-in-out; /* Slide-in animation when dialog opens */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(-10%);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header styling inside the dialog */
+h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+}
+
+/* Label styling for form elements */
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: white;
+  margin-bottom: 0.5rem; /* Added space for better readability */
+}
+
+/* Input and textarea elements */
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ab9ac0;
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease; /* Smooth transition on focus */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000000;
+  background-color: #fbedd0;
+}
+
+/* Actions container for buttons */
+.actions {
+  margin: 1.5rem 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+/* Button styling */
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added smooth background and scale transition */
+}
+
+button[type="button"] {
+  color: #f8f8f8;
+  background-color: #1b182d; /* Subtle background to match theme */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Button depth */
+}
+
+button[type="button"]:hover,
+button[type="button"]:active {
+  color: #fbf9ff;
+  transform: scale(1.05); /* Slight zoom on hover for interaction */
+}
+
+button[type="submit"] {
+  background-color: #0a65aa;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:active {
+  background-color: #0a65aa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Slight zoom effect for focus */
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
   dialog {
-    width: 90%;
-    max-width: 30rem;
-    background-color: #433352;
-    border-radius: 6px;
-    border: none;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    padding: 1rem;
-    top: 5rem;
+    padding: 2rem;
+    top: 10vh; /* Adjusted for better positioning on large screens */
   }
-  
-  h2 {
-    margin: 0;
-    color: #d0c2e1;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    font-size: 0.85rem;
-    color: #ab9ac0;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    font: inherit;
-    padding: 0.15rem 0.25rem;
-    border-radius: 4px;
-    border: 1px solid #ab9ac0;
-    background-color: #d0c2e1;
-  }
-  
-  .actions {
-    margin: 1rem 0 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.25rem;
-  }
-  
+
   button {
-    font: inherit;
-    cursor: pointer;
-    border: none;
-    padding: 0.35rem 1.25rem;
-    border-radius: 4px;
-    background-color: transparent;
+    padding: 0.6rem 1.75rem; /* Larger buttons on wider screens */
   }
-  
-  button[type="button"] {
-    color: #bdadcf;
-  }
-  
-  button[type="button"]:hover,
-  button[type="button"]:active {
-    color: #d0c2e1;
-  }
-  
-  button[type="submit"] {
-    background-color: #9c73ca;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-  }
-  
-  button[type="submit"]:hover,
-  button[type="submit"]:active {
-    background-color: #895cce;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  @media (min-width: 768px) {
-    dialog {
-      padding: 2rem;
-    }
-  }
+}

@@ -1,40 +1,65 @@
 main {
-  width: 90%;
-  max-width: 50rem;
-  margin: 2.5rem auto;
-  display: grid;
-  grid-auto-flow: row;
+  width: 950px;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: white;
+  border: 3px solid black;
 }
 
 #users {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
   display: flex;
-  gap: 0.5rem;
-  overflow: auto;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+#users::-webkit-scrollbar {
+  height: 6px;
+}
+#users::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
 }
 
 #fallback {
-  font-weight: bold;
-  font-size: 1.15rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #555;
   margin: 0;
   text-align: center;
+  padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 842px) {
   main {
-    margin: 4rem auto;
-    grid-template-columns: 1fr 3fr;
+    flex-direction: row;
+    gap: 3rem;
   }
 
   #users {
     flex-direction: column;
+    overflow-y: auto;
+    max-height: 60vh;
   }
 
   #fallback {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: left;
   }
+}
+
+.main-fallback {
+  max-width: 700px;
+  gap: 2rem;
+  border-radius: 8px;
+  overflow: auto;
 }

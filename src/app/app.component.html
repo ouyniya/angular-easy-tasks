@@ -16,6 +16,144 @@
   @if (selectedUser) {
   <app-task [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
-  <p id="fallback">Select a user to see their tasks!</p>
+  <div id="fallback" class="main-fallback">
+    <h3>
+      <svg
+        viewBox="0 0 1024 1024"
+        class="icon"
+        width="32"
+        height="32"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M303.104 221.184h61.44v61.44h-61.44zM362.496 290.816h61.44v61.44h-61.44zM423.936 290.816h61.44v61.44h-61.44zM423.936 352.256h61.44v61.44h-61.44zM485.376 352.256h61.44v61.44h-61.44zM544.768 290.816h61.44v61.44h-61.44zM606.208 290.816h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M544.768 352.256h61.44v61.44h-61.44zM362.496 411.648h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path d="M303.104 473.088h61.44v61.44h-61.44z" fill="#E60012"></path>
+          <path d="M362.496 473.088h61.44v61.44h-61.44z" fill="#E60012"></path>
+          <path
+            d="M606.208 411.648h61.44v61.44h-61.44zM606.208 532.48h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M241.664 532.48h61.44v61.44h-61.44zM241.664 593.92h61.44v61.44h-61.44zM303.104 532.48h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 532.48h61.44v61.44h-61.44zM303.104 593.92h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 593.92h61.44v61.44h-61.44zM423.936 532.48h61.44v61.44h-61.44zM423.936 593.92h61.44v61.44h-61.44zM606.208 593.92h61.44v61.44h-61.44zM544.768 655.36h61.44v61.44h-61.44zM606.208 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M667.648 290.816h61.44v61.44h-61.44zM667.648 473.088h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M667.648 593.92h61.44v61.44h-61.44zM667.648 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M727.04 655.36h61.44v61.44h-61.44zM303.104 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 655.36h61.44v61.44h-61.44zM544.768 714.752h61.44v61.44h-61.44zM606.208 714.752h61.44v61.44h-61.44zM606.208 776.192h61.44v61.44h-61.44zM667.648 714.752h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M727.04 714.752h61.44v61.44h-61.44zM667.648 776.192h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+        </g>
+      </svg>
+
+      Select a user to see their tasks!
+
+      <svg
+        viewBox="0 0 1024 1024"
+        class="icon"
+        width="32"
+        height="32"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M303.104 221.184h61.44v61.44h-61.44zM362.496 290.816h61.44v61.44h-61.44zM423.936 290.816h61.44v61.44h-61.44zM423.936 352.256h61.44v61.44h-61.44zM485.376 352.256h61.44v61.44h-61.44zM544.768 290.816h61.44v61.44h-61.44zM606.208 290.816h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M544.768 352.256h61.44v61.44h-61.44zM362.496 411.648h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path d="M303.104 473.088h61.44v61.44h-61.44z" fill="#E60012"></path>
+          <path d="M362.496 473.088h61.44v61.44h-61.44z" fill="#E60012"></path>
+          <path
+            d="M606.208 411.648h61.44v61.44h-61.44zM606.208 532.48h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M241.664 532.48h61.44v61.44h-61.44zM241.664 593.92h61.44v61.44h-61.44zM303.104 532.48h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 532.48h61.44v61.44h-61.44zM303.104 593.92h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 593.92h61.44v61.44h-61.44zM423.936 532.48h61.44v61.44h-61.44zM423.936 593.92h61.44v61.44h-61.44zM606.208 593.92h61.44v61.44h-61.44zM544.768 655.36h61.44v61.44h-61.44zM606.208 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M667.648 290.816h61.44v61.44h-61.44zM667.648 473.088h61.44v61.44h-61.44z"
+            fill="#009944"
+          ></path>
+          <path
+            d="M667.648 593.92h61.44v61.44h-61.44zM667.648 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M727.04 655.36h61.44v61.44h-61.44zM303.104 655.36h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M362.496 655.36h61.44v61.44h-61.44zM544.768 714.752h61.44v61.44h-61.44zM606.208 714.752h61.44v61.44h-61.44zM606.208 776.192h61.44v61.44h-61.44zM667.648 714.752h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+          <path
+            d="M727.04 714.752h61.44v61.44h-61.44zM667.648 776.192h61.44v61.44h-61.44z"
+            fill="#E60012"
+          ></path>
+        </g>
+      </svg>
+    </h3>
+    <p>
+      Simplify complex workflows with task management — fast, smooth, and
+      hassle-free.
+    </p>
+  </div>
   }
 </main>
