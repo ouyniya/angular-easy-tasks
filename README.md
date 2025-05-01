@@ -22,7 +22,8 @@ Code has been written for learning purposes and adapted with personal improvemen
 
 
 ## 📸 Preview
-![task demo](https://i.imgur.com)
+
+![task demo](https://i.imgur.com/PO6DF69.gif)
 
 
 ## 📦 Technologies
