@@ -22,9 +22,6 @@ export class TaskComponent {
     return this.taskService.getUserIdTasks(this.userId);
   }
 
-  onCompleteTask(id: string) {
-  }
-
   onStartAddTask() {
     this.isAddingTask = true; // hide task >> show adding task model
   }
