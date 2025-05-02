@@ -23,6 +23,8 @@ Code has been written for learning purposes and adapted with personal improvemen
 
 ## 📸 Preview
 
+Live demo! https://ouyniya.github.io/angular-easy-tasks/
+
 ![task demo](https://i.imgur.com/PO6DF69.gif)
 
 

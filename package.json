@@ -9,6 +9,10 @@
     "test": "ng test"
   },
   "private": true,
+  "options": {
+  "outputPath": "dist/angular-easy-tasks",
+  "baseHref": "/angular-easy-tasks/"
+},
   "dependencies": {
     "@angular/animations": "^18.0.0",
     "@angular/common": "^18.0.0",
