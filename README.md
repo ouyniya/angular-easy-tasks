@@ -52,7 +52,7 @@ Code has been written for learning purposes and adapted with personal improvemen
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/angular-task-manager.git
+git clone https://github.com/ouyniya/angular-easy-tasks.git
 
 # Navigate into the project directory
 cd angular-task-manager
